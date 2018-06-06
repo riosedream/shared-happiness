@@ -1,0 +1,38 @@
+---
+layout: default
+className: post
+---
+<div class="banner col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="banner_tag">
+        {% for tag in page.tags %}
+            <span class="banner_tag_item"> {{ tag }}</span>
+        {% endfor %}
+    </div>
+    <h1 class="banner_title">{{ page.title }}</h1>
+    <h3 class="banner_time">Post By {{ page.author }}  [ {{ page.date }} ]</h3>
+</div>
+<div class="container">
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        <article>
+            {{ content }}
+        </article>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <sidebar>
+            {% if page.catalog %}
+                <div class="">
+                    <div class="side-catalog">
+                        <hr class="hidden-sm hidden-xs">
+                        <h5>
+                            <a class="catalog-toggle" href="#">CATALOG</a>
+                        </h5>
+                        <ul class="catalog-body"></ul>
+                    </div>
+                </div>
+            {% endif %}
+        </sidebar>
+    </div>
+     <i class="iconfont icon_arrowtop" onclick="javascript:scrollTo(0,0);"></i> 
+</div>
+
+

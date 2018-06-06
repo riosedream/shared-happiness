@@ -1,0 +1,100 @@
+.about__banner {
+  width: 100%;
+  height: 100vh;
+  background: #000 url(../img/index_bg.jpg) no-repeat center;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+}
+.about__banner__content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.about__banner__title {
+  font-size: 80px;
+  margin-bottom: 50px;
+}
+.about .person .title {
+  display: block;
+  font-weight: bold;
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 10px;
+}
+.about .person__tags {
+  padding: 30px 0;
+  border-bottom: 1px solid #ededed;
+}
+.about .person__tags_link {
+  display: inline-block;
+  position: relative;
+  padding: 10px 9px 10px 14px;
+  margin: 10px;
+  color: rgba(0, 0, 0, 0.36);
+}
+.about .person__tags_link:before, .about .person__tags_link:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #ededed;
+  content: '';
+  transition: transform 0.3s, opacity 0.3s;
+}
+.about .person__tags_link::after {
+  border-color: #354856;
+  opacity: 0;
+  transform: translateY(-7px) translateX(6px);
+}
+.about .person__tags_link:hover::before, .about .person__tags_link:focus::before {
+  opacity: 0;
+  transform: translateY(5px) translateX(-5px);
+}
+.about .person__tags_link:hover::after, .about .person__tags_link:focus::after {
+  opacity: 1;
+  transform: translateY(0px) translateX(0px);
+}
+.about .person__about {
+  padding: 30px 0;
+  border-bottom: 1px solid #ededed;
+  color: rgba(0, 0, 0, 0.36);
+  line-height: 35px;
+}
+.about .person__about img {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 100%;
+}
+.about .person__about__link {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.about .person__about__link__item {
+  margin-right: 10px;
+}
+.about .person__about .iconfont {
+  font-size: 32px;
+}
+.about .person__friends {
+  padding: 30px 0;
+}
+.about .person__friends_link {
+  display: inline-block;
+  line-height: 30px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.36);
+  transition: color 0.3s;
+  margin: 5px 10px;
+}
+
+/*# sourceMappingURL=about.css.map */

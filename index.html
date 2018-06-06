@@ -1,0 +1,94 @@
+---
+layout: default
+title: MF、Wang's blog
+className: index
+B: Block 块
+E: Element 元素
+M: Modifier 修饰符
+---
+<div class="banner container-fluid">
+    <div class="banner__content">
+        <h1 class="banner__title">{{ page.title }}</h1>
+        <h3 class="banner__desc">{{ site.index_desc }}</h3>
+    </div>
+</div>
+<div class="container">
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        <ul class="article">
+            {% for post in paginator.posts %}
+                <li class="article__item">
+                    <a class="article__title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                            <span class="article__project"><i class="iconfont icon_date"></i>{{ post.project }} </span>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+                            <span class="article__date"><i class="iconfont icon_date"></i>{{ post.date | date_to_string }} </span>
+                        </div>
+                        {% if post.tags %}
+                        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-8">
+                            <span class="article__tag"><i class="iconfont icon_tag"></i>
+                                {% for tag in post.tags %}
+                                    {{ tag }} 
+                                {% endfor %}
+                            </span>
+                        </div>
+                        {% endif %}
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="page">
+            {% if paginator.total_pages > 1 %}
+                <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
+                    {% if paginator.previous_page %}
+                        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page_prev">
+                            <i class="iconfont icon_arrowleft"></i>NEWER POSTS
+                        </a>
+                    {% endif %}
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3 col-sm-offset-6 col-md-offset-4 col-lg-offset-6">
+                    {% if paginator.next_page %}
+                        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page_next">
+                            OLDER POSTS<i class="iconfont icon_arrowright"></i>
+                        </a>
+                    {% endif %}
+                </div>
+            {% endif %}
+            <span class="page_number iconfont" data-before="{{paginator.page}}/{{paginator.total_pages}}" onclick="javascript:scrollTo(0,0);"></span> 
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <div class="person">
+            <div class="person__tags">
+                <p class="title">TAGS</p>
+                <div class="person__tags__items">
+                    {% for tag in site.Tags %}
+                        <a href="{{ tag.link }}" class="person__tags_link">{{ tag }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="person__about visible-md-block visible-lg-block">
+                <p class="title">ABOUT ME</p>
+                <img src="/img/head.jpeg" alt="">
+                <p>{{ site.index_desc }}</p>
+                <p>{{ site.index_desc2 }}</p>
+                <div class="person__about__link">
+                    {% for personAccount in site.person_account %}
+                        <a href="{{ personAccount.link }}" target="_blank" class="person__about__link__item">
+                            <i class="iconfont icon_{{ personAccount.type }}"></i>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="person__friends">
+                <p class="title">FRIENDS</p>
+                {% for friend in site.Friends %}
+                    <a href="{{ friend.link }}" target="_blank" class="person__friends_link" data-hover="{{ friend.name }}">
+                        {{ friend.name }}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

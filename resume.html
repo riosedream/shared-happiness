@@ -1,0 +1,182 @@
+---
+layout: default
+className: resume
+---
+<div class="resume__page1">
+    <div class="resume__page1__content">
+        <h1 class="resume__page1__title">前端工程师</h1>
+        <p class="resume__page1__desc">热爱技术，热爱生活，热爱挑战</p>
+        <a href="#resume__page2" class="resume__page1__next">
+            <i class="iconfont icon_arrowdown"></i>
+        </a>
+    </div>
+</div>
+
+<div class="resume__page2" id="resume__page2">
+    <div class="container">
+        <h2 class="resume__page__title resume__page2__title">基本<b> 资料</b></h2>
+        <div class="row">
+             <ul class="resume__page2__icons">
+                <li class="resume__page2__item col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <i class="iconfont icon_jianshu"></i>
+                    <p class="resume__page2__item__title">个人信息</p>
+                    <p class="resume__page2__item__desc">姓名: xxxxx  性别：x<br/>年龄: xx 籍贯：xx</p>
+                </li>
+                <li class="resume__page2__item col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <i class="iconfont icon_jianshu"></i>
+                    <p class="resume__page2__item__title">专业学历</p>
+                    <p class="resume__page2__item__desc">专业：计算机科学与技术<br/>学历：大学本科</p>
+                </li>
+                <li class="resume__page2__item col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <i class="iconfont icon_jianshu"></i>
+                    <p class="resume__page2__item__title">毕业院校</p>
+                    <p class="resume__page2__item__desc">专毕业学校：xx<br/>学习技能：xx</p>
+                </li>
+                <li class="resume__page2__item col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <i class="iconfont icon_jianshu"></i>
+                    <p class="resume__page2__item__title">联系方式</p>
+                    <p class="resume__page2__item__desc">QQ：755314203<br/>邮箱：755314203@qq.com</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="resume__page3">
+    <div class="container">
+        <h2 class="resume__page__title">项目<b> 经验</b></h2>
+        <p class="resume__page3__desc">主要涉及电商，金融，二手车领域，包括PC端，移动端，微信端，主要技术是HTML+CSS+JS，移动端还用到了React。</p>
+        <ul class="resume__page3__menu">
+            <li class="resume__page3__menu__item resume__page3__menu__item_active"><p>所有</p></li>
+            <li class="resume__page3__menu__item"><p>PC端</p></li>
+            <li class="resume__page3__menu__item"><p>移动端</p></li>
+            <li class="resume__page3__menu__item"><p>响应式</p></li>
+        </ul>
+        <div class="row">
+            <ul class="resume__page3__production">
+                {% for item in site.Resume_page3 %}
+                    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="resume__page3__production__item" style="background: url(./img/resume/{{ item.img}}) no-repeat center / cover" data-img="{{ item.img }}">
+                            <div class="resume__page3__production__content">
+                                <p class="resume__page3__production__name">{{ item.name }}</p>
+                                <p class="resume__page3__production__desc">{{ item.desc }}</p>
+                            </div>
+                            <div class="resume__page3__production__mask"></div>
+                        </div> 
+                    </li>
+                {% endfor %}
+            </ul>
+        </div> 
+    </div>
+</div>
+
+<div class="resume__page4">
+    <div class="container">
+        <h2 class="resume__page__title"><b>专业 </b>技能</h2>
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-6 col-lg-6">
+                <img src="/img/resume__page4.png" alt="" class="resume__page3__img">
+            </div>
+            <ul class="resume__page4__skill col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <li class="resume__page4__skill__item">
+                    <h4><i class="iconfont icon_mac"></i>PC端</h4>
+                    <p>熟练使用HTML/CSS技术，精通Javascript/jquery编程,能够熟练使用reactjs等前端MVC框架进行模块开发，熟练的使用grunt，gulp等前端工具，了解less，sass，stylus，coffeescript等前端新技术</p>
+                </li>
+                <li class="resume__page4__skill__item">
+                    <h4><i class="iconfont icon_mobile"></i>移动端</h4>
+                    <p>熟练使用HTML/CSS技术，精通Javascript/jquery编程,能够熟练使用reactjs等前端MVC框架进行模块开发，熟练的使用grunt，gulp等前端工具，了解less，sass，stylus，coffeescript等前端新技术</p>
+                </li>
+                <li class="resume__page4__skill__item">
+                    <h4><i class="iconfont icon_response"></i>响应式</h4>
+                    <p>熟练使用HTML/CSS技术，熟悉bootstrap，此博客就用到了该技术</p>
+                </li>
+                <li class="resume__page4__skill__item">
+                    <h4><i class="iconfont icon_check"></i>其他</h4>
+                    <p>懂网站性能优化，网站百度排名和SEO优化，熟练使用photoshop等切图工具，会常见的UI技巧，懂Java，php等后台语言开发.</p>
+                </li>
+            </ul>
+        </div>
+    </div>   
+</div>
+
+<div class="resume__page5">
+    <div class="container">
+        <div class="row">
+            <ul class="resume__page5__icons">
+                <li class="resume__page5__item col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <i class="iconfont icon_smile"></i>
+                    <p class="resume__page5__item__title">25</p>
+                    <p class="resume__page5__item__desc">AGE YEARS</p>
+                </li>
+                <li class="resume__page5__item col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <i class="iconfont icon_code"></i>
+                    <p class="resume__page5__item__title">100000</p>
+                    <p class="resume__page5__item__desc">CODE AMOUNT</p>
+                </li>
+                <li class="resume__page5__item col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <i class="iconfont icon_check"></i>
+                    <p class="resume__page5__item__title">5900</p>
+                    <p class="resume__page5__item__desc">WORK HOUR</p>
+                </li>
+                <li class="resume__page5__item col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <i class="iconfont icon_trophy"></i>
+                    <p class="resume__page5__item__title">20</p>
+                    <p class="resume__page5__item__desc">PROJECTS AMOUNT</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="resume__page6">
+    <div class="container">
+        <h2 class="resume__page__title">人生<b> 经历</b></h2>
+        <p class="resume__page6__desc">热爱互联网，热爱技术，专注于前端技术开发和用户体验</p>
+        <div class="row">
+            <ul class="resume__page6__production">
+                {% for item in site.Resume_page6 %}
+                    <li class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="resume__page6__production__item">
+                            <img src="/img/resume/{{ item.img }}" alt="" class="resume__page6__production__img">
+                            <p class="resume__page6__production__name">{{ item.name }}</p>
+                            <p class="resume__page6__production__desc">{{ item.job }}</p>
+                            <p class="resume__page6__production__desc">{{ item.desc }}</p>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>   
+</div>
+
+<div class="resume__page7">
+    <div class="container">
+        <h2 class="resume__page__title resume__page7__title"><b>自我 </b>评价</h2>
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                <div id="resume__page7__slide" class="resume__page7__slide">
+                    <div class="resume__slide__item"><p>热爱学习,良好的团队合作精神，能迅速融入新的团队。</br>易和人相处，拥有良好的亲和力。</p></div>
+                    <div class="resume__slide__item"><p>有强烈的责任感，工作踏实，性格开朗乐观，积极上进，吃苦耐劳。</br>能在较大的压力下保持良好的工作状态，善于自我调节。</p></div>
+                    <div class="resume__slide__item"><p>非常热爱编程，喜欢钻研新的技术，喜欢接受各种不同的挑战。</br>具有很强的自学能力和良好的学习方法。</p></div>
+                </div>
+            </div>
+        </div>
+    </div>   
+</div>
+
+<div class="resume__page8">
+    <div class="container">
+        <h2 class="resume__page__title">联系<b> 方式</b></h2>
+    </div>
+</div>
+<script src="js/owl.carousel.js"></script>
+<script>
+    $(function(){
+        $('#resume__page7__slide').owlCarousel({
+            items: 1,
+            autoPlay: true,
+            slideSpeed: 500,
+            pagination: true,
+        });
+    });
+</script>

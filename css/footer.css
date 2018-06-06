@@ -1,0 +1,12 @@
+footer {
+  border-top: 1px solid #ededed;
+  text-align: center;
+  padding: 50px 0;
+}
+footer .iconfont {
+  font-size: 50px;
+  color: #000;
+  margin: 0 10px;
+}
+
+/*# sourceMappingURL=footer.css.map */

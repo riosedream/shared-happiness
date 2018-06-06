@@ -1,0 +1,59 @@
+header{
+    width: 100%;
+    height:50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    .header{
+        &__content{
+        }
+        &__link{
+            font-size: 20px;
+            line-height: 50px;
+            color: #fff;
+            padding: 0 20px;
+            display: block;
+            text-align: center;
+            position: relative;
+            transition: color 0.3s;
+            &:before{
+                position: absolute;
+                top: 30px;
+                left: 50%;
+                color: transparent;
+                content: '•';
+                text-shadow: 0 0 transparent;
+                font-size: 1.2em;
+                transition: text-shadow 0.3s, color 0.3s;
+            }
+            &:hover:before,&:focus:before{
+                color: #fff;
+                text-shadow: 10px 0 #fff, -10px 0 #fff;
+            }
+            &:hover,&:focus{
+                color: #ba7700;
+            }
+        }
+    }
+}
+
+.navbar-mfw{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 2;
+    border: none;
+    box-shadow: none;
+    .navbar-brand{
+            color: #ba7700;
+    }
+    .navbar-nav>li>a{
+        color: #fff;
+        &:hover{
+            color: #ba7700;
+        }
+    }
+}

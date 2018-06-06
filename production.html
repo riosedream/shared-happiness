@@ -1,0 +1,61 @@
+---
+layout: default
+title: 作品集合 | MF、W's blog
+desc: production_desc
+className: production
+---
+<div class="production__banner">
+    <div class="container">
+        <div class="row">
+            <div class="production__banner__content">
+                <h1 class="production__banner__title">{{ site.production_title }}</h1>
+                <h3 class="production__banner__desc">{{ site.production_desc }}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row" id="masonry">
+        {% for production in site.Productions %}
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 box">
+                <div class="production_item">
+                    <div class="production_item_top">
+                        <p class="production_item_name">{{ production.name }}</p>
+                        <p class="production_item_date">{{ production.date }}</p>
+                    </div>
+                    {% if production.resource %}
+                    <a href="{{ site.github_template_link }}{{ production.link }}" target="_blank" class="production_item_link">
+                        <img src="/img/production/{{ production.name }}.png" alt="" class="production_item_img">
+                    </a>
+                    {% else %}
+                    <a href="javascript:void(0);" class="production_item_link">
+                        <img src="/img/production/{{ production.name }}.png" alt="" class="production_item_img">
+                    </a>
+                    {% endif %}
+                    <p class="production_item_desc">{{ production.summary }}</p>
+                    <div class="production_item_bottom">
+                        <div class="production_item_tag">
+                            {% for icon in production.tag %}
+                            <i class="iconfont icon_{{ icon }} production_item_tag_item"></i>
+                            {% endfor %}
+                        </div>
+                        {% if production.resource %}
+                        <a href="{{ production.link }}" target="_blank" class="production_item_link_resource">TO Resource</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script src="/js/masonry.min.js"></script>
+<script>
+    $(function() {
+        var $container = $('#masonry');
+        $container.masonry({
+            itemSelector: '.box',
+            isAnimated: true,
+        });
+    });
+</script>

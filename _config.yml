@@ -1,0 +1,312 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: shared-happiness
+email: devbighero@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  my blog with jekyll
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+encoding: utf-8
+
+# username
+#person account
+person_account: [
+  # twitter
+  #{
+    #"type": "twitter",
+    #"username": "twitter",
+    #"link": ""
+  #},
+  # facebook
+  #{
+    #"type": "facebook",
+    #"username": "facebook",
+    #"link": ""
+  #},
+  # sina
+  {
+    type: "sina",
+    username: "shared-happiness",
+    link: "shared-happiness"
+  },
+  # wechat
+  #{
+    #"type": "wechat",
+   # "username": "wechat",
+    #"link": ""
+  #},
+  # qq
+  #{
+    #"type": "qq",
+    #"username": "qq",
+    #"link": ""
+  #},
+  # zhihu
+  {
+    type: "zhihu",
+    username: "shared-happiness",
+    link: "#"
+  },
+  # jianshu
+  {
+    type: "jianshu",
+    username: "shared-happiness",
+    link: "#"
+  },
+  # github
+  {
+    type: "github",
+    username: "shared-happiness",
+    link: "#"
+  }
+]
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Gems
+gems: 
+ - jekyll-feed
+ - jekyll-paginate
+
+paginate: 10  
+paginate_path: "page:num" 
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+# Header menu
+header_menu: [
+  {
+    name: "Home",
+    link: "/"
+  },
+  {
+    name: "About",
+    link: "/about.html"
+  },
+  {
+    name: "Production",
+    link: "/production.html"
+  },
+  {
+    name: "Resume",
+    link: "/resume.html"
+  }
+]
+
+# Index
+index_title: "shared-happiness"
+index_desc: "写写代码，做做设计"
+index_desc2: "离开世界之前，一切都只是过程"
+
+# About 
+about_title: "About"
+about_desc: "离开世界之前，一切都只是过程"
+
+# Production
+production_title: "作品集合"
+production_desc: "离开世界之前，一切都只是过程"
+
+# Resume
+resume_title: "作品集合"
+resume_desc: "离开世界之前，一切都只是过程"
+
+# Tags
+Tags: [
+  "react",
+  "html",
+  "css",
+  "javascript",
+  "webpack",
+  "nodejs",
+  "angular",
+  "vue",
+  "FIS",
+  "Grunt",
+  "Gulp"
+]
+
+# Friends
+Friends: [
+  {
+    name: "shared-happiness",
+    link: "#"
+  },
+  {
+    name: "SnowRomance",
+    link: "#"
+  },
+  {
+    name: "北辰明",
+    link: "#"
+  },
+  {
+    name: "quantre",
+    link: "#"
+  }
+]
+
+# Produtions
+github_template_link: "#"
+Productions: [
+  {
+    name: "Graphical",
+    date: "2016.08",
+    summary: "纯CSS绘制图形",
+    tag: ['css'],
+    link: "https://github.com/MfWang/Production/blob/master/Graphical/graphical.html",
+    resource: true
+  },
+  {
+    name: "Navigation",
+    date: "2016.10",
+    summary: "Navigation样式集合",
+    tag: ['css'],
+    link: "https://github.com/MfWang/Production/blob/master/Navigation/navigation.html",
+    resource: true
+  },
+  {
+    name: "Loading",
+    date: "2016.11",
+    summary: "",
+    tag: ['css'],
+    link: "https://github.com/MfWang/Production/blob/master/Loading/loading.html",
+    resource: true
+  },
+  {
+    name: "PhoneMenu",
+    date: "2017.03",
+    summary: "",
+    tag: ['css','respone'],
+    link: "https://github.com/MfWang/Production/blob/master/phoneMenu/phonemenu.html",
+    resource: true
+  },
+  {
+    name: "FullScreenAsteroid",
+    date: "2016.03",
+    summary: "满屏的小行星乱撞",
+    tag: ['css','respone'],
+    link: "https://github.com/MfWang/FullScreenAsteroid/blob/master/gaojidonghua-asteroids.html",
+    resource: true
+  },
+  {
+    name: "EscapePlanet",
+    date: "2016.03",
+    summary: "躲避小行星",
+    tag: ['css','respone'],
+    link: "https://github.com/MfWang/Production/blob/master/phoneMenu/phonemenu.html",
+    resource: true
+  },
+  {
+    name: "Timeline",
+    date: "2017.04.17",
+    summary: "",
+    tag: ['css'],
+    link: "https://github.com/MfWang/Production/blob/master/Timeline/timeline.html",
+    resource: true
+  },
+  {
+    name: "Chemao",
+    date: "2015.06",
+    summary: "2015.06——2016.07，在杭州车猫网络科技有限公司任职。公司从事二手车检验与销售，公司官网包括各类二手车车源信息、各个活动页面、合作车上门店信息等。",
+    tag: ['css'],
+    link: "https://github.com/MfWang/Production/blob/master/Timeline/timeline.html",
+    resource: false
+  },
+  {
+    name: "m.Chemao",
+    date: "2015.06",
+    summary: "2015.06——2016.07，在杭州车猫网络科技有限公司任职。公司从事二手车检验与销售，公司官网包括各类二手车车源信息、各个活动页面、合作车上门店信息等。",
+    tag: ['css'],
+    link: "https://github.com/MfWang/Production/blob/master/Timeline/timeline.html",
+    resource: false
+  }
+]
+
+# Resume
+Resume_page3: [
+  {
+    name: '车猫官网',
+    desc: '技术：Html+css',
+    img: "page3_chemao.png",
+    link: "",
+    type: 'PC'
+  },
+  {
+    name: '车猫移动端网站',
+    desc: '技术:Html+jQuery',
+    img: "page3_m.chemao.png",
+    link: "",
+    type: '移动端'
+  },
+  {
+    name: '棒米官网',
+    desc: '技术',
+    img: "page3_bongmi.png",
+    link: "www.bongmi.com",
+    type: 'PC'
+  },
+  {
+    name: '棒米移动网站',
+    desc: '技术',
+    img: "page3_m.bongmi.png",
+    link: "www.bongmi.com",
+    type: '移动端'
+  },
+  {
+    name: '个人博客',
+    desc: '技术',
+    img: "page3_blog.png",
+    link: "mfwang.github.io",
+    type: '响应式'
+  },
+  {
+    name: 'button样式集合',
+    desc: '技术',
+    img: "",
+    link: "www.bongmi.com",
+    type: 'PC'
+  }
+]
+Resume_page6: [
+  {
+    name: "湖州师范学院",
+    img: "page6_hz.jpg",
+    job: "计算机科学与技术",
+    desc: "主要学习编程语言，前端技术，网站制作和开发，大学期间做过很多项目，很喜欢编程"
+  },
+  {
+    name: "湖州银硕软件科技有限公司",
+    img: "page6_hzyinshuo.jpg",
+    job: "实习生",
+    desc: "主要学习编程语言，前端技术，网站制作和开发，大学期间做过很多项目，很喜欢编程"
+  },
+  {
+    name: "杭州车猫网络科技有限公司",
+    img: "page6_chemao.jpg",
+    job: "前端工程师",
+    desc: "工作时间：2015.06-2016.07，主要从事二手车行业的网站开发，包括金融管理系统，电商网站，移动端商城等等"
+  },
+  {
+    name: "杭州棒米科技网络公司",
+    img: "page6_bongmi.jpg",
+    job: "前端工程师",
+    desc: "工作时间：2016.08-至今，公司致力于用智能硬件+移动互联网+大数据模式，采集人体健康大数据，为人体制定个性化健康解决方案。工作内容是负责PC和移动端的官网开发及维护，以及后台数据平台的开发"
+  }
+]

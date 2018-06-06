@@ -1,0 +1,9 @@
+<footer class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="container">
+        {% for personAccount in site.person_account %}
+            <a href="{{ personAccount.link }}" target="_blank" class="footer_link">
+                <i class="iconfont icon_{{ personAccount.type }}"></i>
+            </a>
+        {% endfor %}
+    </div>
+</footer>

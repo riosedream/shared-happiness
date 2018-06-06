@@ -1,0 +1,53 @@
+---
+layout: default
+title: About
+desc: 离开世界之前，一切都只是过程
+className: about
+---
+<div class="about__banner">
+    <div class="container">
+        <div class="row">
+            <div class="about__banner__content">
+                <h1 class="about__banner_title">{{ page.title }}</h1>
+                <h3 class="about__banner_desc">{{ page.desc }}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+     <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+     </div>
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <div class="person">
+            <div class="person__tags">
+                <p class="title">TAGS</p>
+                <div class="person__tags__items">
+                    {% for tag in site.Tags %}
+                        <a href="{{ tag.link }}" class="person__tags_link">{{ tag }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="person__about visible-md visible-lg">
+                <p class="title">ABOUT ME</p>
+                <img src="/img/head.jpeg" alt="">
+                <p>{{ site.index_desc }}</p>
+                <p>{{ site.index_desc2 }}</p>
+                <div class="person__about__link">
+                    {% for personAccount in site.person_account %}
+                        <a href="{{ personAccount.link }}" target="_blank" class="person__about__link__item">
+                            <i class="iconfont icon_{{ personAccount.type }}"></i>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="person__friends">
+                <p class="title">FRIENDS</p>
+                {% for friend in site.Friends %}
+                    <a href="{{ friend.link }}" target="_blank" class="person__friends_link" data-hover="{{ friend.name }}">
+                        {{ friend.name }}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

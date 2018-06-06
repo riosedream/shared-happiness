@@ -1,0 +1,22 @@
+<nav class="navbar navbar-default navbar-mfw">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">shared-happiness</span>
+        <span class="icon-bar">shared-happiness</span>
+        <span class="icon-bar">shared-happiness</span>
+        <span class="icon-bar">shared-happiness</span>
+      </button>
+      <a class="navbar-brand" href="#">shared-happiness</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        {% for headermenu in site.header_menu %}
+          <li>
+            <a class="header__link" href="{{ headermenu.link }}"> {{ headermenu.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>
